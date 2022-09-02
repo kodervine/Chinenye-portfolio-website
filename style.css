@@ -9,7 +9,7 @@
 :root {
   --primary-black-color: #3b3b3b;
   --grey-color: #f7f7f9;
-  --primary-blue-color: #201a67;
+  --primary-blue-color: #0b0351;
 }
 
 body {
@@ -53,7 +53,7 @@ body {
 }
 
 .header li:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   transition: 0.5s ease;
 }
 
@@ -62,8 +62,12 @@ body {
   color: var(--primary-black-color);
 }
 
+.header a:hover{
+  color: var(--primary-blue-color);
+}
+
 .header .button {
-  border: 2px solid var(--primary-blue-color);
+  border: 2px solid var(--primary-black-color);
   padding: 10px 20px;
   align-self: center;
   background-color: transparent;
@@ -93,16 +97,121 @@ body {
   width: 50%;
 }
 
+.showcase-text h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: var(--primary-blue-color);
+}
+
+.showcase-text p{
+  font-size: 18px;
+  font-weight: 500;
+  width: 80%;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
 .showcase-image {
   width: 40%;
 }
 
+.showcase-image .mobile-image {
+  display: none;
+}
+
+.showcase-button {
+  display: flex;
+  gap: 20px;
+}
+
+.showcase-button button {
+  padding: 15px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--primary-blue-color);
+  border: 2px solid var(--primary-blue-color);
+}
+
+.showcase-button button:hover{
+  transform: scale(1.05);
+  transition: 1s ease;
+}
+
+.showcase-button button:first-of-type{
+  background-color: var(--primary-blue-color);
+}
+
+.showcase-button button:first-of-type a{
+  color: white;
+}
+
+.showcase-button a {
+  text-decoration: none;
+  color: var(--primary-blue-color);
+  /* font-size: 16px; */
+}
+
 @media(max-width: 798px){
   .header {
-    padding: 10px;
+    padding: 20px 40px 20px 30px;
   }
 
   .header-name {
     display: none;
+  }
+
+  .header .button {
+    display: none;
+  }
+
+  /* Showcase */
+  .showcase-section {
+    height: auto;
+    flex-direction: column-reverse;
+    padding: 15px;
+  }
+  
+  .showcase-text {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .showcase-text h1 {
+    font-size: 30px;
+  }
+  
+  .showcase-text p {
+    font-size: 16px;
+    width: 90%;
+  }
+  
+  .showcase-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .showcase-image .web-image {
+      display: none;
+  }
+
+  .showcase-image .mobile-image {
+    display: block;
+    border-radius: 50%;    
+    width: 200px;
+  }
+  
+  .showcase-button {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .showcase-button button {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
   }
 }
