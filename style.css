@@ -164,7 +164,12 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 50px;
-  background-color: wheat;
+  background: rgba(228, 228, 228, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .grid-box {
@@ -177,8 +182,12 @@ body {
   padding: 40px;
   border-left: 10px solid var(--primary-blue-color);
   border-radius: 5%;
-  background-color: rgb(255, 246, 246);
-  box-shadow: 0 5px 5px rgba(221, 218, 218, 0.75);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .grid-box:hover {
@@ -285,7 +294,7 @@ body {
   }
 
   .grid-box {
-    width: 90%;
+    width: 100%;
     height: auto;
     flex-direction: column;
     padding: 30px;
