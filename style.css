@@ -161,7 +161,7 @@ body {
 }
 
 /* project grid section */
-/* Previous and next buttons for projects */
+/* Previous and next buttons for projects -  not curently in use*/
 .pre-btn {
   position: absolute;
   left: 0;
@@ -184,7 +184,8 @@ body {
   opacity: 1;
   transform: scale(1.1);
 }
-/* Project grid proper */
+
+/* Project grid proper - actually in use*/
 .grid-header {
   text-align: center;
   font-size: 40px;
@@ -196,10 +197,11 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   /* grid-auto-flow: column;
   overflow-x: auto;
   scroll-behavior: smooth; */
-  padding: 50px;
+  padding: 60px;
   background: rgba(228, 228, 228, 0.6);
   box-shadow: 0 8px 12px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(20px);
