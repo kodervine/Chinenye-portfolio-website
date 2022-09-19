@@ -27,6 +27,7 @@ body {
   box-shadow: 0 5px 5px rgba(221, 218, 218, 0.75);
   position: sticky;
   top: 0vh;
+  z-index: 1000;
 }
 
 .header-name {
@@ -160,6 +161,30 @@ body {
 }
 
 /* project grid section */
+/* Previous and next buttons for projects */
+.pre-btn {
+  position: absolute;
+  left: 0;
+  transform: rotate(180deg);
+  align-self: center;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.next-btn {
+  right: 0;
+  position: absolute;
+  align-self: center;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.pre-btn:hover img,
+.next-btn:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
+/* Project grid proper */
 .grid-header {
   text-align: center;
   font-size: 40px;
@@ -170,7 +195,13 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill);
+  grid-auto-flow: column;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  /* grid-template-columns: repeat();
+  overflow-x: auto;
+  scroll-behavior: smooth; */
   padding: 50px;
   background: rgba(228, 228, 228, 0.6);
   box-shadow: 0 8px 12px 0 rgba(31, 38, 135, 0.37);
@@ -178,10 +209,11 @@ body {
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  position: relative;
 }
 
 .grid-box {
-  width: 80%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
