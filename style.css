@@ -304,25 +304,29 @@ body {
     display: block;
   }
   .mobile-navbar {
-    height: 70vh;
+    height: 100vh;
     background-color: white;
     color: var(--darkest-blue);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
+    padding: 0 0 0 2rem;
   }
 
   .mobile-navbar li {
     padding: 10px;
-  }
-  .mobile-navbar:first-child {
-    padding-top: 40px;
+    list-style: none;
+    transform: 1s ease-in;
   }
 
   .mobile-navbar a {
     color: var(--darkest-blue);
     text-decoration: none;
+  }
+
+  .mobile-navbar a:hover {
+    border-bottom: 2px solid black;
   }
 
   /* Menu icons */
