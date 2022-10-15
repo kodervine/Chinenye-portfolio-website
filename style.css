@@ -273,18 +273,67 @@ body {
   padding: 10px;
 }
 
+/* Mobile navbar */
+/* Mobile navbar */
+.mobile-navbar-container {
+  display: none;
+}
+
+.navbar-menu-icon {
+  display: none;
+}
+
+.navbar-delete-icon {
+  display: none;
+}
 /* Media queries */
 @media (max-width: 768px) {
   .header {
     padding: 20px 40px 20px 30px;
   }
 
-  .header-name {
+  .header .button {
     display: none;
   }
 
-  .header .button {
+  .header-portfolio {
     display: none;
+  }
+
+  .mobile-navbar-container.active {
+    display: block;
+  }
+  .mobile-navbar {
+    height: 70vh;
+    background-color: white;
+    color: var(--darkest-blue);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .mobile-navbar li {
+    padding: 10px;
+  }
+  .mobile-navbar:first-child {
+    padding-top: 40px;
+  }
+
+  .mobile-navbar a {
+    color: var(--darkest-blue);
+    text-decoration: none;
+  }
+
+  /* Menu icons */
+  .navbar-menu-icon.active {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar-delete-icon.active {
+    display: block;
+    cursor: pointer;
   }
 
   /* Showcase */
