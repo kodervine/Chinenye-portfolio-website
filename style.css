@@ -240,9 +240,12 @@ body {
 }
 
 .project-link:hover {
-  border-bottom: 2px solid var(--primary-blue-color);
   transform: scale(1.03);
   transition: 0.2s ease;
+}
+
+.project-link a {
+  text-decoration: none;
 }
 
 /* Footer */
